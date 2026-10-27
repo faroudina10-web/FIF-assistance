@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="FIF Assistance — votre partenaire d’assistance virtuelle, administrative et digitale. You dream it, we realize it.">
+  <title>FIF Assistance — You dream it, we realize it</title>
+  <style>
+    :root{--navy:#06285a;--navy2:#041b3d;--blue:#079bd3;--cyan:#31c5ed;--pale:#eaf8ff;--ink:#10233e;--muted:#63758c;--white:#fff}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;font-family:Inter,Arial,sans-serif;color:var(--ink);background:#fff;line-height:1.6}
+    a{color:inherit;text-decoration:none}.wrap{width:min(1120px,92%);margin:auto}
+    header{position:sticky;top:0;z-index:10;background:rgba(4,27,61,.96);backdrop-filter:blur(12px);color:#fff;border-bottom:1px solid #ffffff20}
+    nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{display:flex;align-items:center;gap:11px;font-weight:800;letter-spacing:.5px}.mark{width:42px;height:42px;border:2px solid var(--cyan);border-radius:50%;display:grid;place-items:center;color:var(--cyan);font-size:20px;font-weight:900}
+    .brand small{display:block;color:#8ddff7;font-size:10px;letter-spacing:2px;font-weight:700}
+    .navlinks{display:flex;align-items:center;gap:25px;font-size:14px}.navlinks a:hover{color:var(--cyan)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 20px;border-radius:999px;font-weight:800;font-size:14px;background:var(--cyan);color:var(--navy2);border:0;cursor:pointer;transition:.2s}
+    .btn:hover{transform:translateY(-2px);filter:brightness(1.05)}.btn-outline{background:transparent;border:1px solid #8ddff7;color:#fff}
+    .hero{background:radial-gradient(circle at 78% 28%,#0a4d84 0,transparent 32%),linear-gradient(135deg,var(--navy2),var(--navy));color:white;overflow:hidden;position:relative}
+    .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;align-items:center;gap:44px;padding:88px 0 96px}
+    .eyebrow{color:var(--cyan);font-size:12px;letter-spacing:3px;font-weight:900;text-transform:uppercase}
+    h1{font-size:clamp(42px,6vw,72px);line-height:1.03;letter-spacing:-2px;margin:18px 0}
+    h1 span{color:var(--cyan)}.hero p{max-width:570px;color:#d5e7f6;font-size:18px}
+    .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}.hero-note{font-size:12px!important;color:#9eb9d1!important;margin-top:18px}
+    .hero-art{min-height:330px;display:grid;place-items:center;position:relative}
+    .orbit{width:min(320px,80vw);aspect-ratio:1;border:1px dashed #31c5ed88;border-radius:50%;display:grid;place-items:center;position:relative}
+    .orbit:before,.orbit:after{content:"";position:absolute;border:1px solid #31c5ed50;border-radius:50%}.orbit:before{inset:25px}.orbit:after{inset:52px}
+    .head-icon{z-index:1;width:155px;height:155px;border-radius:42% 48% 45% 48%;display:grid;place-items:center;background:linear-gradient(145deg,#0b70a4,#07346c);border:2px solid var(--cyan);box-shadow:0 0 45px #079bd344;font-size:65px}
+    .dot{position:absolute;width:12px;height:12px;border-radius:50%;background:var(--cyan);box-shadow:0 0 14px #31c5ed}.d1{top:18px;left:45%}.d2{right:12px;top:38%}.d3{bottom:24px;left:24%}.d4{top:27%;left:8%;background:#d4f7ff}
+    .float-card{position:absolute;background:#fff;color:var(--navy);padding:12px 16px;border-radius:14px;box-shadow:0 15px 40px #00132f44;font-size:13px;font-weight:800}.float-one{right:-3px;top:25px}.float-two{left:-4px;bottom:30px}
+    section{padding:82px 0}.section-head{text-align:center;max-width:680px;margin:0 auto 42px}.section-head h2{font-size:clamp(29px,4vw,42px);line-height:1.15;margin:10px 0}.section-head p{color:var(--muted);margin:0}
+    .services{background:#f5fbff}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.card{background:#fff;padding:27px;border-radius:20px;border:1px solid #e3edf5;box-shadow:0 12px 30px #092b4b08}.service-icon{width:51px;height:51px;border-radius:15px;background:var(--pale);display:grid;place-items:center;font-size:24px}.card h3{margin:18px 0 8px}.card p{margin:0;color:var(--muted);font-size:14px}.tag{display:inline-block;margin-top:18px;color:#087ca9;font-size:12px;font-weight:800;letter-spacing:.5px}
+    .about-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:50px;align-items:center}.about-panel{background:linear-gradient(145deg,var(--navy),#07528a);padding:34px;border-radius:25px;color:white;min-height:270px;display:flex;flex-direction:column;justify-content:space-between}.about-panel strong{font-size:28px;line-height:1.2}.about-panel span{color:#8fe8ff;font-weight:800;letter-spacing:2px;font-size:12px}.about-copy h2{font-size:clamp(30px,4vw,42px);line-height:1.15;margin:12px 0}.about-copy p{color:var(--muted)}.ticks{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:24px}.tick{font-size:14px;font-weight:700}.tick:before{content:"✓";color:#078ebd;font-weight:900;margin-right:8px}
+    .steps{background:#f5fbff}.step-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.step{padding:25px;border-radius:18px;background:white;border:1px solid #e3edf5}.num{font-size:13px;color:#008fbe;font-weight:900;letter-spacing:2px}.step h3{margin:10px 0 6px}.step p{color:var(--muted);font-size:14px;margin:0}
+    .cta{padding:0 0 82px;background:#f5fbff}.cta-box{border-radius:26px;padding:50px;background:linear-gradient(125deg,var(--navy2),#07528a);color:white;display:flex;align-items:center;justify-content:space-between;gap:25px}.cta-box h2{font-size:clamp(28px,4vw,40px);line-height:1.15;margin:0 0 10px}.cta-box p{margin:0;color:#d2e8f7}
+    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px}.contact-grid h2{font-size:38px;line-height:1.1;margin:10px 0}.contact-grid p{color:var(--muted)}.contact-list{display:grid;gap:14px;margin-top:25px}.contact-item{display:flex;gap:13px;align-items:center}.contact-item b{display:block}.contact-item small{color:var(--muted)}
+    form{display:grid;gap:14px;background:#f6fbff;padding:25px;border-radius:20px;border:1px solid #e3edf5}label{font-size:13px;font-weight:800}input,textarea,select{width:100%;padding:13px 14px;border:1px solid #d6e3ed;border-radius:11px;background:white;font:inherit;color:var(--ink)}textarea{min-height:120px;resize:vertical}.form-note{font-size:12px;color:var(--muted);margin:0}
+    footer{background:var(--navy2);color:#d5e7f6;padding:26px 0;font-size:12px}.foot{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}.foot strong{color:white}
+    @media(max-width:780px){.navlinks{display:none}.hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr}.hero-grid{padding:65px 0 60px;gap:20px}.hero-art{min-height:280px}.cards,.step-grid{grid-template-columns:1fr}.about-grid{gap:25px}.cta-box{padding:32px;align-items:flex-start;flex-direction:column}.ticks{grid-template-columns:1fr 1fr}section{padding:62px 0}}
+    @media(max-width:420px){.ticks{grid-template-columns:1fr}.float-one{right:-8px}.float-two{left:-8px}.hero p{font-size:16px}}
+  </style>
+</head>
+<body>
+<header>
+  <nav class="wrap">
+    <a class="brand" href="#accueil" aria-label="FIF Assistance accueil"><span class="mark">F</span><span>FIF ASSISTANCE<small>VOTRE PARTENAIRE DIGITAL</small></span></a>
+    <div class="navlinks"><a href="#services">Services</a><a href="#apropos">À propos</a><a href="#methode">Comment ça marche</a><a href="#contact">Contact</a></div>
+    <button class="btn" id="langToggle" type="button" aria-label="Switch language">English</button><a class="btn" href="#contact" data-i18n="navcta">Parlons de votre projet</a>
+  </nav>
+</header>
+<main>
+  <section class="hero" id="accueil">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="eyebrow">Votre temps est précieux</div>
+        <h1>Vous rêvez.<br><span>On le réalise.</span></h1>
+        <p>FIF Assistance vous aide à gérer les petites et grandes tâches du quotidien pour que vous puissiez vous concentrer sur ce qui compte vraiment.</p>
+        <div class="actions"><a class="btn" href="#contact">Travaillons ensemble ↗</a><a class="btn btn-outline" href="#services">Découvrir nos services</a></div>
+        <p class="hero-note">YOU DREAM IT · WE REALIZE IT</p>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="orbit"><div class="head-icon">◉</div><i class="dot d1"></i><i class="dot d2"></i><i class="dot d3"></i><i class="dot d4"></i></div>
+        <div class="float-card float-one">✦ Un coup de main, à distance</div><div class="float-card float-two">✓ Plus de temps pour vous</div>
+      </div>
+    </div>
+  </section>
+  <section class="services" id="services">
+    <div class="wrap">
+      <div class="section-head"><div class="eyebrow">Ce que nous faisons</div><h2>Une aide adaptée à vos besoins</h2><p>Des services à distance, flexibles et humains, pour les entrepreneurs, les petites entreprises et les particuliers.</p></div>
+      <div class="cards">
+        <article class="card"><div class="service-icon">📅</div><h3>Assistance administrative</h3><p>Organisation de documents, saisie de données, mise en forme de fichiers et petites tâches administratives.</p><span class="tag">ORGANISATION · DOCUMENTS</span></article>
+        <article class="card"><div class="service-icon">💬</div><h3>Messages & service client</h3><p>Aide à la gestion des e-mails et messages, réponses préparées et suivi des demandes de vos clients.</p><span class="tag">MESSAGES · SUIVI</span></article>
+        <article class="card"><div class="service-icon">📱</div><h3>Réseaux sociaux</h3><p>Préparation de légendes, idées de publications, calendrier de contenu et assistance de base en ligne.</p><span class="tag">CONTENU · PLANIFICATION</span></article>
+        <article class="card"><div class="service-icon">🔎</div><h3>Recherche en ligne</h3><p>Recherche d’informations, comparaison d’options et préparation de résumés clairs selon vos consignes.</p><span class="tag">RECHERCHE · SYNTHÈSE</span></article>
+        <article class="card"><div class="service-icon">🗂️</div><h3>Organisation & planning</h3><p>Aide à organiser un agenda, préparer des listes de tâches et garder une vue claire sur les priorités.</p><span class="tag">AGENDA · PLANIFICATION</span></article>
+        <article class="card"><div class="service-icon">✨</div><h3>Petites missions sur mesure</h3><p>Vous avez une tâche précise ? Présentez-nous votre besoin et nous vous dirons honnêtement comment nous pouvons aider.</p><span class="tag">FLEXIBLE · SUR MESURE</span></article>
+      </div>
+    </div>
+  </section>
+  <section id="apropos">
+    <div class="wrap about-grid">
+      <div class="about-panel"><span>FIF ASSISTANCE</span><strong>Votre idée mérite une équipe qui vous aide à avancer.</strong><span>YOU DREAM IT. WE REALIZE IT.</span></div>
+      <div class="about-copy"><div class="eyebrow">Qui sommes-nous ?</div><h2>Une petite équipe, une grande envie de vous aider.</h2><p>FIF Assistance est un projet entrepreneurial porté par une équipe de trois personnes, avec l’envie de proposer une assistance en ligne sérieuse, accessible et chaleureuse.</p><p>Nous construisons notre activité progressivement : nous échangeons avec vous, clarifions votre besoin et convenons ensemble du travail à réaliser avant de commencer.</p><div class="ticks"><div class="tick">Échanges clairs</div><div class="tick">À distance</div><div class="tick">Solutions flexibles</div><div class="tick">Respect des délais convenus</div></div></div>
+    </div>
+  </section>
+  <section class="steps" id="methode">
+    <div class="wrap"><div class="section-head"><div class="eyebrow">Simple et transparent</div><h2>Comment ça marche ?</h2><p>Un processus simple pour commencer en toute confiance.</p></div>
+      <div class="step-grid">
+        <article class="step"><div class="num">ÉTAPE 01</div><h3>Vous nous expliquez</h3><p>Décrivez votre tâche, votre objectif et le délai souhaité.</p></article>
+        <article class="step"><div class="num">ÉTAPE 02</div><h3>Nous proposons une solution</h3><p>Nous confirmons ce qui est réalisable, le délai et le tarif avant de commencer.</p></article>
+        <article class="step"><div class="num">ÉTAPE 03</div><h3>Nous avançons ensemble</h3><p>Nous réalisons la mission convenue et restons en contact pendant le travail.</p></article>
+      </div>
+    </div>
+  </section>
+  <section class="cta"><div class="wrap"><div class="cta-box"><div><h2>Prêt(e) à gagner du temps ?</h2><p>Parlons de votre besoin et voyons comment FIF Assistance peut vous aider.</p></div><a class="btn" href="#contact">Contactez-nous ↗</a></div></div></section>
+  <section id="contact">
+    <div class="wrap contact-grid">
+      <div><div class="eyebrow">Contact</div><h2>Racontez-nous votre projet.</h2><p>Écrivez-nous pour présenter votre besoin. Nous vous répondrons dès que possible.</p>
+        <div class="contact-list">
+          <div class="contact-item"><span class="service-icon">✉️</span><div><b>E-mail</b><small><a href="mailto:faroudina10@gmail.com">faroudina10@gmail.com</a></small></div></div>
+          <div class="contact-item"><span class="service-icon">💬</span><div><b>WhatsApp</b><small><a href="https://wa.me/261375673428" target="_blank" rel="noopener">+261 37 56 73 428 · Écrire sur WhatsApp</a></small></div></div>
+          <div class="contact-item"><span class="service-icon">🌍</span><div><b>En ligne, depuis Madagascar</b><small>Nous travaillons à distance selon les besoins convenus.</small></div></div>
+        </div>
+      </div>
+      <form id="contactForm">
+        <div><label for="name">Votre nom</label><input id="name" name="name" placeholder="Comment vous appelez-vous ?" required></div>
+        <div><label for="email">Votre e-mail</label><input id="email" name="email" type="email" placeholder="vous@exemple.com" required></div>
+        <div><label for="service">De quoi avez-vous besoin ?</label><select id="service" name="service"><option>Assistance administrative</option><option>Messages et service client</option><option>Réseaux sociaux</option><option>Recherche en ligne</option><option>Organisation et planning</option><option>Autre mission</option></select></div>
+        <div><label for="message">Votre message</label><textarea id="message" name="message" placeholder="Expliquez-nous votre projet..." required></textarea></div>
+        <button class="btn" type="submit">Préparer mon message ↗</button>
+        <p class="form-note">Ce formulaire ouvre votre application e-mail. Configurez l’adresse de réception dans le fichier index.html avant de publier le site.</p>
+      </form>
+    </div>
+  </section>
+</main>
+<footer><div class="wrap foot"><div><strong>FIF ASSISTANCE</strong> — You dream it, we realize it.</div><div>© <span id="year"></span> FIF Assistance · Tous droits réservés</div></div></footer>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  const translations = {
+    en: {
+      '.brand small':'YOUR DIGITAL PARTNER',
+      '.navlinks a:nth-child(1)':'Services',
+      '.navlinks a:nth-child(2)':'About',
+      '.navlinks a:nth-child(3)':'How it works',
+      '.navlinks a:nth-child(4)':'Contact',
+      '[data-i18n="navcta"]':'Let’s talk about your project',
+      '.hero .eyebrow':'YOUR TIME IS VALUABLE',
+      '.hero h1':'You dream.<br><span>We make it happen.</span>',
+      '.hero-grid > div:first-child > p:not(.hero-note)':'FIF Assistance helps you manage everyday tasks so you can focus on what matters most.',
+      '.actions .btn:first-child':'Let’s work together ↗',
+      '.actions .btn:last-child':'Explore our services',
+      '.hero-note':'YOU DREAM IT · WE REALIZE IT',
+      '#services .section-head .eyebrow':'WHAT WE DO',
+      '#services .section-head h2':'Support tailored to your needs',
+      '#services .section-head p':'Flexible, human remote support for entrepreneurs, small businesses and individuals.',
+      '#apropos .about-copy .eyebrow':'WHO WE ARE',
+      '#apropos .about-copy h2':'A small team, a big desire to help.',
+      '#apropos .about-copy p:nth-of-type(1)':'FIF Assistance is a business project run by a team of three, aiming to provide reliable, accessible and friendly online assistance.',
+      '#apropos .about-copy p:nth-of-type(2)':'We are building our service step by step: we discuss your needs, clarify the task and agree on the work before starting.',
+      '#methode .section-head .eyebrow':'SIMPLE AND TRANSPARENT',
+      '#methode .section-head h2':'How does it work?',
+      '#methode .section-head p':'A simple process to get started with confidence.',
+      '.cta-box h2':'Ready to save time?',
+      '.cta-box p':'Tell us what you need and let’s see how FIF Assistance can help.',
+      '.cta-box .btn':'Contact us ↗',
+      '#contact .eyebrow':'CONTACT',
+      '#contact h2':'Tell us about your project.',
+      '#contact > .wrap > div:first-child > p':'Send us a message about what you need. We’ll reply as soon as possible.',
+      'label[for="name"]':'Your name',
+      '#name':'',
+      'label[for="email"]':'Your email',
+      'label[for="service"]':'What do you need help with?',
+      'label[for="message"]':'Your message',
+      '#message':'',
+      '#contactForm button':'Prepare my message ↗',
+      '.form-note':'This form opens your email app. Messages are not stored on this website.',
+      'footer .foot > div:first-child':'FIF ASSISTANCE — You dream it, we realize it.'
+    },
+    fr: {}
+  };
+  const originalText = new Map();
+  function setLanguage(lang) {
+    document.documentElement.lang = lang;
+    document.getElementById('langToggle').textContent = lang === 'fr' ? 'English' : 'Français';
+    document.querySelectorAll('.card').forEach((card, i) => {
+      const en = [
+        ['Administrative assistance','Document organization, data entry, and file formatting.','ORGANIZATION · DOCUMENTS'],
+        ['Messages & customer support','Help managing emails and messages, prepared replies, and customer follow-up.','MESSAGES · FOLLOW-UP'],
+        ['Social media','Captions, post ideas, content calendars, and basic online support.','CONTENT · PLANNING'],
+        ['Online research','Research, option comparisons, and clear summaries based on your instructions.','RESEARCH · SUMMARIES'],
+        ['Organization & planning','Help organizing a calendar, task lists, and priorities.','CALENDAR · PLANNING'],
+        ['Custom tasks','Have a specific task? Tell us what you need and we’ll explain how we can help.','FLEXIBLE · CUSTOM']
+      ][i];
+      if (lang === 'en') { card.querySelector('h3').textContent=en[0]; card.querySelector('p').textContent=en[1]; card.querySelector('.tag').textContent=en[2]; }
+      else {
+        const fr = [
+          ['Assistance administrative','Organisation de documents, saisie de données, mise en forme de fichiers et petites tâches administratives.','ORGANISATION · DOCUMENTS'],
+          ['Messages & service client','Aide à la gestion des e-mails et messages, réponses préparées et suivi des demandes de vos clients.','MESSAGES · SUIVI'],
+          ['Réseaux sociaux','Préparation de légendes, idées de publications, calendrier de contenu et assistance de base en ligne.','CONTENU · PLANIFICATION'],
+          ['Recherche en ligne','Recherche d’informations, comparaison d’options et préparation de résumés clairs selon vos consignes.','RECHERCHE · SYNTHÈSE'],
+          ['Organisation & planning','Aide à organiser un agenda, préparer des listes de tâches et garder une vue claire sur les priorités.','AGENDA · PLANIFICATION'],
+          ['Petites missions sur mesure','Vous avez une tâche précise ? Présentez-nous votre besoin et nous vous dirons honnêtement comment nous pouvons aider.','FLEXIBLE · SUR MESURE']
+        ][i];
+        card.querySelector('h3').textContent=fr[0]; card.querySelector('p').textContent=fr[1]; card.querySelector('.tag').textContent=fr[2];
+      }
+    });
+    for (const [selector, value] of Object.entries(translations.en)) {
+      const el = document.querySelector(selector);
+      if (!el) continue;
+      if (!originalText.has(selector)) originalText.set(selector, el.innerHTML);
+      if (lang === 'en') {
+        if (selector === '#name') el.placeholder = 'What should we call you?';
+        else if (selector === '#message') el.placeholder = 'Tell us about your project...';
+        else el.innerHTML = value;
+      } else {
+        if (selector === '#name') el.placeholder = 'Comment vous appelez-vous ?';
+        else if (selector === '#message') el.placeholder = 'Expliquez-nous votre projet...';
+        else el.innerHTML = originalText.get(selector);
+      }
+    }
+    const service = document.getElementById('service');
+    const optionsEn = ['Administrative assistance','Messages and customer support','Social media','Online research','Organization and planning','Other task'];
+    const optionsFr = ['Assistance administrative','Messages et service client','Réseaux sociaux','Recherche en ligne','Organisation et planning','Autre mission'];
+    [...service.options].forEach((o,i)=>o.textContent=lang==='en'?optionsEn[i]:optionsFr[i]);
+    const steps = lang === 'en'
+      ? [['STEP 01','Tell us what you need','Describe your task, goal and desired deadline.'],['STEP 02','We suggest a solution','We confirm what’s possible, the timeline and price before starting.'],['STEP 03','We work together','We complete the agreed task and keep in touch as we work.']]
+      : [['ÉTAPE 01','Vous nous expliquez','Décrivez votre tâche, votre objectif et le délai souhaité.'],['ÉTAPE 02','Nous proposons une solution','Nous confirmons ce qui est réalisable, le délai et le tarif avant de commencer.'],['ÉTAPE 03','Nous avançons ensemble','Nous réalisons la mission convenue et restons en contact pendant le travail.']];
+    document.querySelectorAll('.step').forEach((el,i)=>{el.querySelector('.num').textContent=steps[i][0];el.querySelector('h3').textContent=steps[i][1];el.querySelector('p').textContent=steps[i][2];});
+    const ticksEn=['Clear communication','Remote service','Flexible solutions','Agreed deadlines'];
+    const ticksFr=['Échanges clairs','À distance','Solutions flexibles','Respect des délais convenus'];
+    document.querySelectorAll('.tick').forEach((el,i)=>el.textContent=lang==='en'?ticksEn[i]:ticksFr[i]);
+    document.querySelectorAll('.contact-item b').forEach((el,i)=>el.textContent=(lang==='en'?['Email','WhatsApp','Online, based in Madagascar']:['E-mail','WhatsApp','En ligne, depuis Madagascar'])[i]);
+    document.querySelectorAll('.contact-item small')[1].innerHTML = '<a href="https://wa.me/261375673428" target="_blank" rel="noopener">+261 37 56 73 428 · '+(lang==='en'?'Message on WhatsApp':'Écrire sur WhatsApp')+'</a>';
+    document.querySelector('.hero-art .float-card.float-one').textContent=lang==='en'?'✦ Remote help, made simple':'✦ Un coup de main, à distance';
+    document.querySelector('.hero-art .float-card.float-two').textContent=lang==='en'?'✓ More time for you':'✓ Plus de temps pour vous';
+  }
+  document.getElementById('langToggle').addEventListener('click',()=>setLanguage(document.documentElement.lang==='fr'?'en':'fr'));
+
+  document.getElementById('contactForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    const destination = 'faroudina10@gmail.com';
+    const f = new FormData(this);
+    const subject = encodeURIComponent('Demande de service — FIF Assistance');
+    const body = encodeURIComponent('Nom : '+f.get('name')+'\nE-mail : '+f.get('email')+'\nService : '+f.get('service')+'\n\nMessage :\n'+f.get('message'));
+    window.location.href = 'mailto:'+destination+'?subject='+subject+'&body='+body;
+  });
+</script>
+</body>
+</html>
